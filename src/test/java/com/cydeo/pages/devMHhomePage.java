@@ -12,6 +12,7 @@ public class devMHhomePage {
     public devMHhomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
     @FindBy(id = "primary")
     public List<WebElement> actNavbar;
 }

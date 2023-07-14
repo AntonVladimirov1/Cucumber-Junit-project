@@ -1,7 +1,12 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.devMHhomePage;
+import com.cydeo.utilities.BrowserUtils;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 import java.util.List;
 import java.util.Map;
@@ -10,10 +15,15 @@ public class devMHHome_StepDefinitions {
 
     @When("User is on the MH home page")
     public void user_is_on_the_mh_home_page() {
+        Driver.getDriver().get("https://movinghelpd.com");
     }
+    devMHhomePage devMHhomePage =new devMHhomePage();
     @Then("User sees list of navbar")
     public void user_sees_list_of_navbar(List<String> navbar) {
-        System.out.println(navbar);
+
+        //System.out.println(BrowserUtils.getElementText(devMHhomePage.actNavbar));
+
+        Assert.assertEquals(navbar,BrowserUtils.getElementText(devMHhomePage.actNavbar));
     }
 
 }

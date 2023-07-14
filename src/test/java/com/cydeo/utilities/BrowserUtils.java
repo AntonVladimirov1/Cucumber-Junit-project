@@ -90,10 +90,8 @@ public class BrowserUtils {
 
     public static List<String> dropdown_as_STRING(WebElement dropdownElement){
         Select object = new Select(dropdownElement);
-        // Storing all the ACTUAL option into a List of WebElement
-        List<WebElement> actObjects = object.getOptions();
-        // Creating an Empty list of String to store ACTUAL <option> as String
-        List<String> actObjects_as_STRING = new ArrayList<>();
+        List<WebElement> actObjects = object.getOptions(); // Storing all the ACTUAL option into a List of WebElement
+        List<String> actObjects_as_STRING = new ArrayList<>(); // Creating an Empty list of String to store ACTUAL <option> as String
         // Looping through the List<WebElement>, getting all options text, and storing them into List<String>
         for (WebElement each : actObjects) {
             actObjects_as_STRING.add(each.getText());

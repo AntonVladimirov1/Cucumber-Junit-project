@@ -8,10 +8,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin = {
-                "pretty",       // pretty in console
+                "json:target/cucumber.json",
+                "junit:target/junit/junit-report.xml",
                 "html:target/cucumber-reports.html",   // generating HTML reports
-                 "rerun:target/rerun.txt",
-                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"     // generating pretty reports
+                "rerun:target/rerun.txt",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber",     // generating pretty reports
+                "pretty",       // pretty in console
         },
         publish = true,                                // creating public link to report
         features = "src/test/resources/features",
@@ -20,7 +22,7 @@ import org.junit.runner.RunWith;
         //dryRun = true                                // will generate only missing snippets and will not execute the code
         dryRun = false,
        // monochrome = true, - just color of the reports in console
-        tags = ""
+        tags = "@MHhome"
 
 
 )

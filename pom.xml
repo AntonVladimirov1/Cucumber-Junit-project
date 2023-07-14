@@ -20,7 +20,7 @@
 <!--                    <threadCount>4</threadCount>-->
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
-                        <include>**/TestRunner*.java</include>
+                        <include>**/*Runner.java</include>
                     </includes>
                 </configuration>
             </plugin>
