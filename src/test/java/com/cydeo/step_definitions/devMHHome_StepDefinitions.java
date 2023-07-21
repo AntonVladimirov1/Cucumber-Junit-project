@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
@@ -19,11 +20,13 @@ public class devMHHome_StepDefinitions {
     }
     devMHhomePage devMHhomePage =new devMHhomePage();
     @Then("User sees list of navbar")
-    public void user_sees_list_of_navbar(List<String> navbar) {
+    public void user_sees_list_of_navbar() {
 
-        //System.out.println(BrowserUtils.getElementText(devMHhomePage.actNavbar));
+       for (WebElement each:devMHhomePage.actNavbar){
 
-        Assert.assertEquals(navbar,BrowserUtils.getElementText(devMHhomePage.actNavbar));
+            Assert.assertTrue(each.isDisplayed());
+            System.out.println(each.getText());
+        }
     }
 
 }

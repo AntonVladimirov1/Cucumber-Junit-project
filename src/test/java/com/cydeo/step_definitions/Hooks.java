@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-    @Before (order = 1)
+    //@Before (order = 1)
     public void setUp(){
         System.out.println("--->@Before: - running before each SCENARIO");
     }
