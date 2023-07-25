@@ -2,10 +2,12 @@
 Feature: MH navbar verification
 
 
-
   Scenario: List of navbar Tabs
     When User is on the MH home page
-    Then User sees list of navbar
-
+    Then User sees list of expNavbar
+      | HOME      |
+      | ACCOUNT   |
+      | RESOURCES |
+      | CART      |
 
 

@@ -65,9 +65,17 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.invisibilityOf(target));
     }
 
-    public static void waitVisibility(WebElement target,int duration){
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(duration));
-        wait.until(ExpectedConditions.visibilityOf(target));
+    public static List<String> getElementsText(List<WebElement> list) {
+        List<String> elemTexts = new ArrayList<>();
+        for (WebElement el : list) {
+            elemTexts.add(el.getText());
+        }
+        return elemTexts;
+    }
+
+    public static WebElement waitForVisibility(WebElement element, int time) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time));
+        return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     public static WebElement waitVisibility(By locator, int duration){
@@ -112,5 +120,8 @@ public class BrowserUtils {
         Driver.getDriver().findElement(By.cssSelector("#datepicker")).click();
         Driver.getDriver().findElement(By.xpath(locator)).click();
     }
+
+    //Code for resolution window problems: Driver.getDriver().manage().window().setSize(new Dimension(1920, 1080));
+    //(adjust the dimensions based on your device!!!)
 
 }
