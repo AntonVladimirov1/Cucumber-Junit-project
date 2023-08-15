@@ -1,18 +1,14 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.devMHhomePage;
-import com.cydeo.utilities.BrowserUtils;
-import com.cydeo.utilities.Driver;
+import com.cydeo.utility.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
-import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class devMHHome_StepDefinitions {
 

@@ -1,9 +1,9 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.EtsySearchPage;
-import com.cydeo.utilities.BrowserUtils;
-import com.cydeo.utilities.ConfigReader;
-import com.cydeo.utilities.Driver;
+import com.cydeo.utility.BrowserUtils;
+import com.cydeo.utility.ConfigReader;
+import com.cydeo.utility.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

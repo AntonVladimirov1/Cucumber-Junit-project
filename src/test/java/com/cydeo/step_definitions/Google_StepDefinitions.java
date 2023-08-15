@@ -1,14 +1,12 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.GoogleSearchPage;
-import com.cydeo.utilities.BrowserUtils;
-import com.cydeo.utilities.Driver;
+import com.cydeo.utility.BrowserUtils;
+import com.cydeo.utility.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.hr.Kad;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WindowType;
 
 public class Google_StepDefinitions {
 

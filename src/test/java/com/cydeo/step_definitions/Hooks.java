@@ -2,23 +2,24 @@ package com.cydeo.step_definitions;
 
 // "Pre" and "Post" conditions
 
-import com.cydeo.utilities.BrowserUtils;
-import com.cydeo.utilities.Driver;
+import com.cydeo.utility.BrowserUtils;
+import com.cydeo.utility.ConfigReader;
+import com.cydeo.utility.Driver;
 import io.cucumber.java.*;
-import org.junit.AfterClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-    //@Before (order = 1)
-    public void setUp(){
-        System.out.println("--->@Before: - running before each SCENARIO");
+    //@Before
+    public void setUpDriver(){
+        System.out.println("--->@Before: ");
+        Driver.getDriver().get(ConfigReader.getProperty("devMHLogin"));
     }
 
    // @Before (value = "@login", order = 2)
     public void login_scenario(){
-        System.out.println("--->@Before: - running before each SCENARIO");
+        System.out.println("--->@Before: ");
     }
 
     @After

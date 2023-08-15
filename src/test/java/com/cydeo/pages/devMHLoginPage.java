@@ -1,13 +1,14 @@
 package com.cydeo.pages;
 
-import com.cydeo.utilities.Driver;
+import com.cydeo.utility.ConfigReader;
+import com.cydeo.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class devMHloginPage {
+public class devMHLoginPage {
 
-    public devMHloginPage() {
+    public devMHLoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -21,7 +22,9 @@ public class devMHloginPage {
     public WebElement submitButton;
 
 
-    public void login(String username,String password){
+    public void login(){
+        String username = ConfigReader.getProperty("devUsername");
+        String password = ConfigReader.getProperty("devPassword");
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         submitButton.click();
