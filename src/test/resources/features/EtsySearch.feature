@@ -18,4 +18,4 @@ Feature: Etsy search functionality
   Scenario: Etsy search functionality title verification (parameterized)
     When  user types in the search box "Wooden spoon"
     And  user clicks search button
-    Then  user sees "Wooden spoon" is in the title
+    Then  user sees "Wooden spoon - Etsy" in the title

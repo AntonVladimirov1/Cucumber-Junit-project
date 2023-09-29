@@ -120,7 +120,8 @@ public class BrowserUtils {
         Driver.getDriver().findElement(By.xpath(locator)).click();
     }
 
-    //Code for resolution window problems: Driver.getDriver().manage().window().setSize(new Dimension(1920, 1080));
+    //Code for resolution window problems:
+    // Driver.getDriver().manage().window().setSize(new Dimension(1920, 1080));
     //(adjust the dimensions based on your device!!!)
 
 }

@@ -8,6 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import static org.junit.Assert.*;
 
 public class Etsy_stepDefinition {
 
@@ -39,9 +40,10 @@ public class Etsy_stepDefinition {
     public void userTypesInTheSearchBox(String keyword) {
         etsySearchPage.searchBox.sendKeys(keyword);
     }
-    @Then("user sees {string} is in the title")
+    @Then("user sees {string} in the title")
     public void userSeesIsInTheTitle(String expTitle) {
-        BrowserUtils.verifyTitleContains(expTitle);
+        BrowserUtils.verifyTitle(expTitle);
+
     }
 
 

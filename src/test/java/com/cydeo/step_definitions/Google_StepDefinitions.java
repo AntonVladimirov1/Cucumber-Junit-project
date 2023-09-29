@@ -40,7 +40,7 @@ public class Google_StepDefinitions {
     }
 
 
-    @When("user searches for a orange")
+    @When("user searches for an orange")
     public void userSearchesForOrange() {
         googleSearchPage.searchBox.sendKeys("orange" + Keys.ENTER);
     }

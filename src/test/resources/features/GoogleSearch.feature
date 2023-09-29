@@ -17,7 +17,7 @@ Feature: Google search functionality
   @antonio3
   Scenario: Search result title verification2
     Given user is on the Google search page
-    When user searches for a orange
+    When user searches for an orange
     Then user should see the orange in the title
 
   @antonio4

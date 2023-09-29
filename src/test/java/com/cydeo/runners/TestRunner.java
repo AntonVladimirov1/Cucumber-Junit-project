@@ -8,25 +8,25 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin = {
-                "json:target/cucumber.json",
+                "json:target/cucumber.json",                                 // generating json file
                 "junit:target/junit/junit-report.xml",
-                "html:target/cucumber-reports.html",   // generating HTML reports
+                "html:target/cucumber-reports.html",                        // generating HTML reports
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",     // generating pretty reports
-                "pretty",       // pretty in console
+                "pretty",                                                    // pretty in console
         },
         publish = true,                                // creating public link to report
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
-        //dryRun = false                               // by default will execute everything, including Java code and generate missing snippets
-        //dryRun = true                                // will generate only missing snippets and will not execute the code
-        dryRun = false,
+        dryRun = false,                               // by default will execute everything, including Java code and generate missing snippets
+        //dryRun = true,                              // will generate only missing snippets and will not execute the code
+
        // monochrome = true, - just color of the reports in console
-        tags = "@MHhome"
+        tags = "@woodenSpoon3"
 
 
 )
-                // mvn test -Dcucumber.filter.tags=@webTableLogin3
+                // mvn test -Dcucumber.filter.tags=@woodenSpoon3
 
 public class TestRunner {
 

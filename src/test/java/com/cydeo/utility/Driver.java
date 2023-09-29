@@ -1,5 +1,6 @@
 package com.cydeo.utility;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -55,19 +56,19 @@ public class Driver {
                     }
                     break;
                 case "chrome":
-                    //WebDriverManager.chromedriver().setup();
+                    WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
                 case "firefox":
-                    //WebDriverManager.firefoxdriver().setup();
+                    WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
                 case "edge":
-                   // WebDriverManager.edgedriver().setup();
+                    WebDriverManager.edgedriver().setup();
                     driverPool.set(new EdgeDriver());
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -75,6 +76,7 @@ public class Driver {
 
                     // opens Browser in the background
                 case "headless-chrome":
+                    WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless=new");
                     driverPool.set(new ChromeDriver(options));
@@ -84,6 +86,7 @@ public class Driver {
 
                     // for Driver updated version
                 case "remote-allow-origins":
+                    WebDriverManager.chromedriver().setup();
                     ChromeOptions options2 = new ChromeOptions();
                     options2.addArguments("--remote-allow-origins=*");
                     driverPool.set(new ChromeDriver(options2));

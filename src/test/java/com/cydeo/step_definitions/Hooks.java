@@ -11,10 +11,10 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-    //@Before
+    @Before
     public void setUpDriver(){
         System.out.println("--->@Before: ");
-        Driver.getDriver().get(ConfigReader.getProperty("devMHLogin"));
+       // Driver.getDriver().get(ConfigReader.getProperty("devMHLogin"));
     }
 
    // @Before (value = "@login", order = 2)
