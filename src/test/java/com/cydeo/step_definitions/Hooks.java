@@ -30,8 +30,10 @@ public class Hooks {
         }
         System.out.println("--->@After: - running after each SCENARIO");
         BrowserUtils.sleep(2);
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
+
+
 
    // @BeforeStep
     public void setupStep(){

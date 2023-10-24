@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
         //dryRun = true,                              // will generate only missing snippets and will not execute the code
 
        // monochrome = true, - just color of the reports in console
-        tags = "@woodenSpoon3"
+        tags = "@devMHlogin"
 
 
 )
